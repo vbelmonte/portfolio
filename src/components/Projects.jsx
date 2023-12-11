@@ -1,4 +1,5 @@
 import { ButtonBig } from './Button'
+import { ProjectCard } from './ProjectCard'
 import placeholder from '../assets/photos/placeholder.jpg'
 import placeholder2 from '../assets/photos/placeholder-2.png'
 
@@ -12,34 +13,26 @@ export function Projects() {
         </div>
         <div className='display-flex flex-column gap-80 right'>
           <div className='project-grid'>
-            <div className='card'>
-                <img src={placeholder}/>
-                <div>
-                  <h6>Art A Day</h6>
-                  <figcaption>Front End Development</figcaption>
-                </div>
-            </div>
-            <div className='card'>
-                <img src={placeholder2}/>
-                <div>
-                  <h6>Art A Day</h6>
-                  <figcaption>Front End Development</figcaption>
-                </div>
-            </div>
-            <div className='card'>
-                <img src={placeholder}/>
-                <div>
-                  <h6>Art A Day</h6>
-                  <figcaption>Front End Development</figcaption>
-                </div>
-            </div>
-            <div className='card'>
-                <img src={placeholder}/>
-                <div>
-                  <h6>Art A Day</h6>
-                  <figcaption>Front End Development</figcaption>
-                </div>
-            </div>
+            <ProjectCard
+              projectName='Art A Day'
+              projectType='Front End Development'
+              projectImg={placeholder}
+            />
+            <ProjectCard
+              projectName='Art A Day'
+              projectType='Front End Development'
+              projectImg={placeholder2}
+            />
+            <ProjectCard
+              projectName='Art A Day'
+              projectType='Front End Development'
+              projectImg={placeholder}
+            />
+            <ProjectCard
+              projectName='Art A Day'
+              projectType='Front End Development'
+              projectImg={placeholder}
+            />
           </div>
           <div>
             <ButtonBig text='View all my projects on Github →' />
