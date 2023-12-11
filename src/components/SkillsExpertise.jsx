@@ -1,3 +1,5 @@
+import { SoftSkillCard } from './SoftSkillCard'
+
 export function SkillsExpertise() {
   return (
     <section id='skills-expertise' className='display-flex justify-center'>
@@ -52,30 +54,30 @@ export function SkillsExpertise() {
             </div>
             <div className='display-flex flex-column gap-48 soft-skills'>
               <div className='skills-grid'>
-                <div className='soft-skill-listing'>
-                  <h6>Communication</h6>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu non odio euismod lacinia at.</p>
-                </div>
-                <div className='soft-skill-listing'>
-                  <h6>Consultation</h6>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu non odio euismod lacinia at.</p>
-                </div>
-                <div className='soft-skill-listing'>
-                  <h6>Collaboration</h6>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu non odio euismod lacinia at.</p>
-                </div>
-                <div className='soft-skill-listing'>
-                  <h6>Problem Solving</h6>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu non odio euismod lacinia at.</p>
-                </div>
-                <div className='soft-skill-listing'>
-                  <h6>Prototyping</h6>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu non odio euismod lacinia at.</p>
-                </div>
-                <div className='soft-skill-listing'>
-                  <h6>Development</h6>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu non odio euismod lacinia at.</p>
-                </div>
+                <SoftSkillCard
+                  skill='Communication'
+                  description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu non odio euismod lacinia at.'
+                />
+                <SoftSkillCard
+                  skill='Consultation'
+                  description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu non odio euismod lacinia at.'
+                />
+                <SoftSkillCard
+                  skill='Collaboration'
+                  description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu non odio euismod lacinia at.'
+                />
+                <SoftSkillCard
+                  skill='Problem Solving'
+                  description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu non odio euismod lacinia at.'
+                />
+                <SoftSkillCard
+                  skill='Prototyping'
+                  description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu non odio euismod lacinia at.'
+                />
+                <SoftSkillCard
+                  skill='Development'
+                  description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu non odio euismod lacinia at.'
+                />
               </div>
             </div>
           </div>
