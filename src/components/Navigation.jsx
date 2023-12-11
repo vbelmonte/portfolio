@@ -7,10 +7,10 @@ export function Navigation() {
         <img src={logo} />
       </div>
       <div className='links'>
-        <a href='#about-me'>About Me</a>
-        <a href='#projects'>Projects</a>
-        <a href='#skills-expertise'>Skills & Expertise</a>
-        <a href='#contact'>Contact</a>
+        <a className='underline-hover black' href='#about-me'>About Me</a>
+        <a className='underline-hover black' href='#projects'>Projects</a>
+        <a className='underline-hover black' href='#skills-expertise'>Skills & Expertise</a>
+        <a className='underline-hover black' href='#contact'>Contact</a>
       </div>
     </nav>
   )

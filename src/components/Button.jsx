@@ -10,7 +10,7 @@ export function ButtonBig({ text, link }) {
 
 export function ButtonLink({ text, link }) {
   return (
-    <div className='primary button'>
+    <div className='primary button slide'>
       <a href={link}>
         <div>
           {text}

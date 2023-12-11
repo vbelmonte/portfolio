@@ -185,6 +185,32 @@ a {
   font-family: 'Poppins Medium';
   color: var(--black);
   text-decoration: none;
+  position: relative;
+}
+
+a.underline-hover::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: -8px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: top left;
+  transition: transform 0.2s ease;
+}
+
+a.underline-hover.black::before {
+  background-color: var(--black);
+}
+
+a.underline-hover.white::before {
+  background-color: var(--white);
+}
+
+a.underline-hover:hover::before {
+  transform: scaleX(1);
 }
 
 ul {
@@ -303,6 +329,12 @@ button,
 
 .button.big a {
   color: var(--white);
+}
+
+.button.slide:hover,
+.button.slide:focus {
+  background-color:var(--yellow);
+  /*box-shadow: inset 6.5em 0 0 0 var(--hover);*/
 }
 
 
