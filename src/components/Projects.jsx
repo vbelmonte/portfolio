@@ -35,7 +35,10 @@ export function Projects() {
             />
           </div>
           <div>
-            <ButtonBig text='View all my projects on Github →' />
+            <ButtonBig
+              text='View all my projects on Github →'
+              link='https://github.com/vbelmonte'
+            />
           </div>
         </div>
       </div>

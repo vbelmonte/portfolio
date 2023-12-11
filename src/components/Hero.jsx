@@ -1,4 +1,4 @@
-import { ButtonPrimary } from "./Button"
+import { ButtonLink } from "./Button"
 import portrait from '../assets/photos/BW_Portrait_Small.jpg'
 
 export function Hero() {
@@ -16,7 +16,10 @@ export function Hero() {
             I build sites and applications with the end user in mind
           </h6>
         </div>
-        <ButtonPrimary text='View my work' />
+        <ButtonLink
+          text='View my work →'
+          link='#projects'
+        />
       </div>
       <div className='right'>
         <img src={portrait}/>

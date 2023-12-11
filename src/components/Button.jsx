@@ -1,22 +1,21 @@
-export function ButtonPrimary({ text }) {
+export function ButtonBig({ text, link }) {
   return (
-    <button className='primary' type='button'>
-      <div>
+    <div className='big button'>
+      <a href={link} target='_blank' rel='noreferrer'>
         {text}
-      </div>
-      <div>
-        →
-      </div>
-    </button>
+      </a>
+    </div>
   )
 }
 
-export function ButtonBig({ text }) {
+export function ButtonLink({ text, link }) {
   return (
-    <button className='big' type='button'>
-      <div>
-        {text}
-      </div>
-    </button>
+    <div className='primary button'>
+      <a href={link}>
+        <div>
+          {text}
+        </div>
+      </a>
+    </div>
   )
 }

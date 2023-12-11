@@ -1,4 +1,4 @@
-import { ButtonPrimary } from './Button'
+import { ButtonLink } from './Button'
 
 export function Contact() {
   return (
@@ -8,7 +8,10 @@ export function Contact() {
           <h1>Send me a message if you would like to work with me or need my expertise on your next project</h1>
         </div>
         <div className='display-flex justify-content-end'>
-          <ButtonPrimary text='villybelmonte@gmail.com' />
+          <ButtonLink
+            text='villybelmonte@gmail.com'
+            link='mailto:villybelmonte@gmail.com'
+           />
         </div>
       </div>
     </section>

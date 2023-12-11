@@ -273,27 +273,36 @@ ul.list-style-none {
 
 /** BUTTON STYLES **/
 
-button {
+button,
+.button {
   border: none;
   font-family: 'Poppins Medium';
-  font-size: 19px;
+  font-size: 16px;
+  line-height: 160%;
 }
 
-button.primary {
+.button.primary {
   background-color: var(--white);
   color: var(--black);
 
   display: flex;
   gap: 1rem;
-  padding: 1rem 2rem;
+  padding: 1.5rem 1.75rem;
 }
 
-button.big {
+.button.primary a {
+  color: var(--black);
+}
+
+.button.big {
   background-color: var(--black);
-  color: var(--white);
-  padding: 5rem 3rem;
+  padding: 4rem 2.5rem;
   text-align: left;
-  max-width: 14rem;
+  max-width: 7rem;
+}
+
+.button.big a {
+  color: var(--white);
 }
 
 
