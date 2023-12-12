@@ -364,6 +364,21 @@ img:hover {
 section {
   padding: 12.5rem 11.25rem;
   padding-top: 5rem;
+  justify-content: center;
+}
+
+@media only screen and (min-width: 1280px) {
+  section {
+    padding: 7rem 6.25rem;
+    padding-top: 3rem;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  section {
+    padding: 12.5rem 11.25rem;
+    padding-top: 3rem;
+  }
 }
 
 .container {
@@ -573,6 +588,10 @@ footer .top {
 }
 
 @media only screen and (min-width: 1280px) {
+  #about-me {
+    padding: 7rem 6.25rem;
+  }
+
   #about-me .catchphrase {
     padding-left: 3rem;
   }
@@ -586,7 +605,7 @@ footer .top {
 
 @media only screen and (min-width: 1920px) {
   #about-me {
-    padding-top: 12.5rem;
+    padding: 12.5rem 11.25rem;
     display: flex;
     gap: 5rem;
   }
