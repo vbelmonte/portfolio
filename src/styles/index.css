@@ -55,7 +55,8 @@ table {
   --off-white: #F2F2F2;
   --off-black: #222222;
   --pure-black: #000000;
-  --gray  : #6E6E6E;
+  --gray: #6E6E6E;
+  --light-gray: #ACACAC;
   --yellow: #E4B61A;
 }
 
@@ -66,6 +67,10 @@ body {
   font-size: 16px;
   font-family: 'Poppins Regular';
   background-color: var(--white);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 hr {
@@ -416,22 +421,29 @@ nav {
   position: fixed;
   top: 0;
   z-index: 99;
+
+  transition: all linear 0.1s;
 }
 
 
 @media only screen and (min-width: 1280px) {
   nav {
     width: calc(100% - 6rem);
-    padding: 3rem;
+    padding: 2rem 3rem;
+    mix-blend-mode: difference;
+    filter: invert(100%);
+  }
+
+  nav.collapsed {
+    background-color: var(--white);
+    border-bottom: solid 1px var(--light-gray);
+    padding: 1rem 3rem;
+
+    mix-blend-mode: normal;
+    filter: invert(0%);
   }
 }
 
-@media only screen and (min-width: 1440px) {
-  nav {
-    width: calc(100% - 200px);
-    padding: 48px 100px;
-  }
-}
 
 nav .links {
   display: flex;
