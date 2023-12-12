@@ -4,9 +4,9 @@ import portrait from '../assets/photos/BW_Portrait_Small.jpg'
 export function Hero() {
   return (
     <header>
-      <div className='left display-flex flex-column justify-center'>
-        <div className='container display-flex flex-column gap-80'>
-          <div className='content display-flex flex-column gap-48'>
+      <div className='left display-flex flex-column justify-center align-center'>
+        <div className='container display-flex flex-column'>
+          <div className='content display-flex flex-column'>
             <h3>
               Villy Belmonte
             </h3>
