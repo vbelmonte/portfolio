@@ -443,10 +443,44 @@ header {
   height: 100vh;
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0%;
+  }
+  70% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(16px);
+  }
+  70% {
+    transform: translateY(16px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+header .container {
+  align-items: flex-start;
+}
+
 header .left {
   flex: 1;
   background-color: var(--black);
   color: var(--white);
+  position: relative;
+}
+
+header .left .container {
+  animation-name: fadeIn, slideUp;
+  animation-duration: 1s;
 }
 
 header .right {
