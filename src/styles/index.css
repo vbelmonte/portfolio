@@ -342,6 +342,18 @@ button,
 
 
 
+/** IMAGE PROPERTIES **/
+img {
+  filter: grayscale(100%);
+  transition: filter linear 0.1s;
+}
+
+img:hover {
+  filter:grayscale(0%);
+}
+
+
+
 /** BOX, CONTAINER, SECTION PROPERTIES **/
 
 section {
@@ -403,6 +415,7 @@ nav {
   justify-content: space-between;
   position: fixed;
   top: 0;
+  z-index: 99;
 }
 
 
