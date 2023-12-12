@@ -1,21 +1,19 @@
 export function ButtonBig({ text, link }) {
   return (
-    <div className='big button'>
-      <a href={link} target='_blank' rel='noreferrer'>
+    <a href={link} target='_blank' rel='noreferrer'>
+      <div className='big button slide'>
         {text}
-      </a>
-    </div>
+      </div>
+    </a>
   )
 }
 
 export function ButtonLink({ text, link }) {
   return (
-    <div className='primary button slide'>
-      <a href={link}>
-        <div>
-          {text}
-        </div>
-      </a>
-    </div>
+    <a href={link}>
+      <div className='primary button slide'>
+        {text}
+      </div>
+    </a>
   )
 }
