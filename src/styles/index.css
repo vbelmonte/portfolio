@@ -214,6 +214,12 @@ a.underline-hover.white::before {
   background-color: var(--white);
 }
 
+a.underline-hover.yellow::before {
+  height: 2px;
+  bottom: 0px;
+  background-color: var(--yellow);
+}
+
 a.underline-hover:hover::before {
   transform: scaleX(1);
 }
@@ -401,6 +407,11 @@ section {
   width: 100%;
   height: 75%;
   object-fit: cover;
+}
+
+.card .img-link {
+  display: inline-block;
+  height: 100%;
 }
 
 section .left {

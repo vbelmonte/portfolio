@@ -17,21 +17,25 @@ export function Projects() {
               projectName='Art A Day'
               projectType='Front End Development'
               projectImg={placeholder}
+              projectLink='#projects'
             />
             <ProjectCard
               projectName='Art A Day'
               projectType='Front End Development'
               projectImg={placeholder2}
+              projectLink='#projects'
             />
             <ProjectCard
               projectName='Art A Day'
               projectType='Front End Development'
               projectImg={placeholder}
+              projectLink='#projects'
             />
             <ProjectCard
               projectName='Art A Day'
               projectType='Front End Development'
               projectImg={placeholder}
+              projectLink='#projects'
             />
           </div>
           <div>
