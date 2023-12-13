@@ -55,7 +55,8 @@ table {
   --off-white: #F2F2F2;
   --off-black: #222222;
   --pure-black: #000000;
-  --gray  : #6E6E6E;
+  --gray: #6E6E6E;
+  --light-gray: #ACACAC;
   --yellow: #E4B61A;
 }
 
@@ -66,6 +67,10 @@ body {
   font-size: 16px;
   font-family: 'Poppins Regular';
   background-color: var(--white);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 hr {
@@ -185,6 +190,38 @@ a {
   font-family: 'Poppins Medium';
   color: var(--black);
   text-decoration: none;
+  position: relative;
+}
+
+a.underline-hover::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: -8px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: top left;
+  transition: transform 0.2s ease;
+}
+
+a.underline-hover.black::before {
+  background-color: var(--black);
+}
+
+a.underline-hover.white::before {
+  background-color: var(--white);
+}
+
+a.underline-hover.yellow::before {
+  height: 2px;
+  bottom: 0px;
+  background-color: var(--yellow);
+}
+
+a.underline-hover:hover::before {
+  transform: scaleX(1);
 }
 
 ul {
@@ -279,6 +316,7 @@ button,
   font-family: 'Poppins Medium';
   font-size: 16px;
   line-height: 160%;
+  transition: ease 0.4s;
 }
 
 .button.primary {
@@ -287,7 +325,8 @@ button,
 
   display: flex;
   gap: 1rem;
-  padding: 1.5rem 1.75rem;
+  padding: 1rem 2rem;
+  box-shadow: inset 0 0 0 0 var(--yellow);
 }
 
 .button.primary a {
@@ -296,13 +335,32 @@ button,
 
 .button.big {
   background-color: var(--black);
+  color: var(--white);
   padding: 4rem 2.5rem;
   text-align: left;
   max-width: 7rem;
+  box-shadow: inset 0 0 0 0 var(--yellow);
 }
 
-.button.big a {
-  color: var(--white);
+.button.big:hover {
+  color: var(--black);
+}
+
+.button.slide:hover,
+.button.slide:focus {
+  box-shadow: inset 17rem 0 0 0 var(--yellow);
+}
+
+
+
+/** IMAGE PROPERTIES **/
+img {
+  filter: grayscale(100%);
+  transition: filter linear 0.1s;
+}
+
+img:hover {
+  filter:grayscale(0%);
 }
 
 
@@ -312,6 +370,21 @@ button,
 section {
   padding: 12.5rem 11.25rem;
   padding-top: 5rem;
+  justify-content: center;
+}
+
+@media only screen and (min-width: 1280px) {
+  section {
+    padding: 7rem 6.25rem;
+    padding-top: 3rem;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  section {
+    padding: 12.5rem 11.25rem;
+    padding-top: 3rem;
+  }
 }
 
 .container {
@@ -334,6 +407,11 @@ section {
   width: 100%;
   height: 75%;
   object-fit: cover;
+}
+
+.card .img-link {
+  display: inline-block;
+  height: 100%;
 }
 
 section .left {
@@ -368,22 +446,30 @@ nav {
   justify-content: space-between;
   position: fixed;
   top: 0;
+  z-index: 99;
+
+  transition: all linear 0.1s;
 }
 
 
 @media only screen and (min-width: 1280px) {
   nav {
     width: calc(100% - 6rem);
-    padding: 3rem;
+    padding: 2rem 3rem;
+    mix-blend-mode: difference;
+    filter: invert(100%);
+  }
+
+  nav.collapsed {
+    background-color: var(--white);
+    border-bottom: solid 1px var(--light-gray);
+    padding: 1rem 3rem;
+
+    mix-blend-mode: normal;
+    filter: invert(0%);
   }
 }
 
-@media only screen and (min-width: 1440px) {
-  nav {
-    width: calc(100% - 200px);
-    padding: 48px 100px;
-  }
-}
 
 nav .links {
   display: flex;
@@ -392,13 +478,47 @@ nav .links {
 
 header {
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0%;
+  }
+  70% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(16px);
+  }
+  70% {
+    transform: translateY(16px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+header .container {
+  align-items: flex-start;
 }
 
 header .left {
   flex: 1;
   background-color: var(--black);
   color: var(--white);
+  position: relative;
+}
+
+header .left .container {
+  animation-name: fadeIn, slideUp;
+  animation-duration: 1s;
 }
 
 header .right {
@@ -414,14 +534,23 @@ header img {
   width: 100%;
   height: 100vh;
   object-fit: cover;
-  object-position: center 20%;
+  object-position: center 0%;
 }
 
 @media only screen and (min-width: 1280px) {
-  header .left {
-    align-items: flex-start;
-    padding: 7rem 10rem;
-    gap: 7rem;
+  header .left .container {
+    gap: 6rem;
+    margin: 4rem 3rem;
+  }
+
+  header .left .content {
+    gap: 2rem;
+  }
+}
+
+@media only screen and (min-width: 1440px) {  
+  header .left .container {
+    max-width: 40rem;
   }
 }
 
@@ -470,6 +599,10 @@ footer .top {
 }
 
 @media only screen and (min-width: 1280px) {
+  #about-me {
+    padding: 7rem 6.25rem;
+  }
+
   #about-me .catchphrase {
     padding-left: 3rem;
   }
@@ -483,7 +616,7 @@ footer .top {
 
 @media only screen and (min-width: 1920px) {
   #about-me {
-    padding-top: 12.5rem;
+    padding: 12.5rem 11.25rem;
     display: flex;
     gap: 5rem;
   }

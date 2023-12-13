@@ -12,13 +12,13 @@ export function Footer() {
             <p>Follow me and see more of my work:</p>
             <ul className='list-style-none display-flex flex-row gap-24'>
             <li>
-              <a>Github</a>
+              <a className='underline-hover white' href='https://github.com/vbelmonte' target='_blank' rel='noreferrer'>Github</a>
             </li>
             <li>
-              <a>Dribbble</a>
+              <a className='underline-hover white'>Dribbble</a>
             </li>
             <li>
-              <a>Behance</a>
+              <a className='underline-hover white'>Behance</a>
             </li>
           </ul>
           </div>
