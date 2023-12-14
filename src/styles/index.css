@@ -368,27 +368,47 @@ img:hover {
 /** BOX, CONTAINER, SECTION PROPERTIES **/
 
 section {
-  padding: 12.5rem 11.25rem;
-  padding-top: 5rem;
+  padding: 4rem 1rem;
+  padding-top: 2rem;
   justify-content: center;
+}
+
+@media only screen and (min-width: 744px) {
+  section {
+    padding: 5rem 2rem;
+    padding-bottom: 5rem;
+  }
+
+  section .container {
+    max-width: 62.5rem;
+  }
 }
 
 @media only screen and (min-width: 1280px) {
   section {
-    padding: 7rem 6.25rem;
-    padding-top: 3rem;
+    padding: 8rem 4rem;
+  }
+
+  section .container {
+    max-width: 97.5rem;
   }
 }
 
 @media only screen and (min-width: 1920px) {
   section {
     padding: 12.5rem 11.25rem;
-    padding-top: 3rem;
   }
 }
 
 .container {
-  max-width: 97.5rem;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 1280px) {
+  section .container {
+    flex-direction: row;
+    gap: 5rem;
+  }
 }
 
 .box {
@@ -414,8 +434,19 @@ section {
   height: 100%;
 }
 
-section .left {
-  min-width: 15rem;
+
+@media only screen and (min-width: 1280px) {
+  section .left {
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 10rem;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  section .left {
+    min-width: 15rem;
+  }
 }
 
 section .right {
@@ -427,9 +458,23 @@ section .right {
 }
 
 .project-grid {
-  display: grid;
-  grid-gap: 5rem;
-  grid-template-columns: repeat(2, minmax(17rem, 35rem));
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+@media only screen and (min-width: 744px) {
+  .project-grid {
+    display: grid;
+    grid-gap: 3rem;
+    grid-template-columns: repeat(2, minmax(17rem, 35rem));
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .project-grid {
+    grid-gap: 5rem;
+  }
 }
 
 .skills-grid {
@@ -616,7 +661,8 @@ header img {
 }
 
 footer {
-  padding: 80px 100px;
+  padding: 3rem 1rem;
+  padding-top: 2rem;
   background-color: var(--pure-black);
   color: var(--white);
 }
@@ -634,19 +680,30 @@ footer .top {
 #about-me .catchphrase,
 #contact .catchphrase {
   border-left: 1rem solid var(--yellow);
+  padding-left: 2rem;
+}
+
+#about-me .columns {
+  flex-direction: column;
+  gap: 3rem;
+}
+
+#about-me .right {
+  gap: 3rem;
 }
 
 @media only screen and (min-width: 1280px) {
-  #about-me {
-    padding: 7rem 6.25rem;
-  }
-
   #about-me .catchphrase {
     padding-left: 3rem;
   }
 
   #contact .catchphrase {
     padding-left: 3rem;
+  }
+
+  #about-me .columns {
+    flex-direction: row;
+    gap: 5rem;
   }
 }
 
@@ -655,8 +712,6 @@ footer .top {
 @media only screen and (min-width: 1920px) {
   #about-me {
     padding: 12.5rem 11.25rem;
-    display: flex;
-    gap: 5rem;
   }
   
   #about-me .left {
