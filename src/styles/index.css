@@ -444,20 +444,35 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: fixed;
+  position: absolute;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 99;
+  padding: 1rem;
 
   transition: all linear 0.1s;
+  mix-blend-mode: difference;
+  filter: invert(100%);
 }
 
+nav .links {
+  /*display: flex;*/
+  display: none;
+  gap: 2rem;
+}
 
 @media only screen and (min-width: 1280px) {
   nav {
+    position: fixed;
     width: calc(100% - 6rem);
     padding: 2rem 3rem;
     mix-blend-mode: difference;
     filter: invert(100%);
+  }
+
+  nav .links {
+    display: flex;
   }
 
   nav.collapsed {
@@ -470,14 +485,9 @@ nav {
   }
 }
 
-
-nav .links {
-  display: flex;
-  gap: 2rem;
-}
-
 header {
   display: flex;
+  flex-direction: column;
   min-height: 100vh;
 }
 
