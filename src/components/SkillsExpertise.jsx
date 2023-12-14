@@ -4,7 +4,7 @@ export function SkillsExpertise() {
   return (
     <section id='skills-expertise' className='display-flex justify-center'>
       <div className='display-flex gap-48 container'>
-        <div className='display-flex flex-column justify-space-between left'>
+        <div className='display-flex flex-column left'>
           <h1 className='uppercase'>Skills & Expertise</h1>
           <h1 className='gray'>03</h1>
         </div>

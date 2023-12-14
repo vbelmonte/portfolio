@@ -2,15 +2,15 @@ export function About() {
   return (
     <section id='about-me' className='display-flex'>
       <div className='display-flex gap-48 container'>
-        <div className='display-flex flex-column justify-space-between left'>
+        <div className='display-flex flex-column left'>
           <h1 className='uppercase'>About Me</h1>
           <h1 className='gray'>01</h1>
         </div>
-        <div className='display-flex flex-column gap-80 right'>
+        <div className='display-flex flex-column right'>
           <div className='catchphrase'>
             <h2>I build sites and applications with the end user in mind</h2>
           </div>
-          <div className='display-flex gap-80'>
+          <div className='display-flex columns'>
             <div className='display-flex flex-column gap-16 content-column'>
               <h6>Summary</h6>
               <p>
