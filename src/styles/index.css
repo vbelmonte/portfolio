@@ -596,16 +596,37 @@ header .right .content {
   align-items: flex-start;
 }
 
-header img {
+header img.main-img {
   width: 100%;
   /*height: 100vh;*/
   object-fit: cover;
   object-position: center 0%;
 }
 
-@media only screen and (min-width: 1280px) {
-  header img {
+@media only screen and (min-width: 744px) {
+  header .left {
+    background-color: transparent;
+  }
+
+  header .left .container {
+    mix-blend-mode: difference;
+  }
+
+  header .right {
+    position: absolute;
+    width: 100vw;
+    z-index: -1;
+  }
+
+  header img.main-img {
     height: 100vh;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  header img.main-img {
+    display: block;
+    height: 100%;
   }
 
   header .left,
@@ -614,12 +635,14 @@ header img {
   }
 
   header .left {
+    background-color: var(--black);
     justify-content: center;
   }
 
   header .left .container {
     gap: 6rem;
     margin: 4rem 3rem;
+    mix-blend-mode: normal;
   }
 
   header .left .content {
@@ -627,7 +650,9 @@ header img {
   }
 
   header .right {
-    height: 100vh;
+    position: relative;
+    z-index: auto;
+    width: auto;
   }
 }
 
