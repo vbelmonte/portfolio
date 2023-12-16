@@ -489,7 +489,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -580,6 +580,7 @@ header .left {
   color: var(--white);
   position: relative;
   padding: 2rem 1rem;
+  padding-top: 6rem;
   box-sizing: border-box;
 
   min-height: 100vh;
@@ -603,7 +604,7 @@ header img.main-img {
   object-position: center 0%;
 }
 
-@media only screen and (min-width: 744px) {
+@media only screen and (min-width: 600px) and (orientation: portrait) {
   header .left {
     background-color: transparent;
   }
@@ -614,7 +615,7 @@ header img.main-img {
 
   header .right {
     position: absolute;
-    width: 100vw;
+    width: 100%;
     z-index: -1;
   }
 
