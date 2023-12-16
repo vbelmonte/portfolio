@@ -24,7 +24,7 @@ export function Hero() {
         </div>
       </div>
       <div className='right'>
-        <img src={portrait}/>
+        <img className='main-img' src={portrait}/>
       </div>
     </header>
   )
