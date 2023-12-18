@@ -560,6 +560,7 @@ header {
 @media only screen and (min-width: 1280px) {
   header {
     flex-direction: row;
+    height: 100vh;
   }
 }
 
