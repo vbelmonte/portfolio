@@ -316,17 +316,20 @@ button,
   font-family: 'Poppins Medium';
   font-size: 16px;
   line-height: 160%;
-  transition: ease 0.4s;
+  transition: ease 0.3s;
 }
 
 .button.primary {
   background-color: var(--white);
   color: var(--black);
+  width: 18rem;
 
   display: flex;
+  justify-content: center;
   gap: 1rem;
   padding: 1rem 2rem;
   box-shadow: inset 0 0 0 0 var(--yellow);
+  box-sizing: border-box;
 }
 
 .button.primary a {
@@ -336,19 +339,25 @@ button,
 .button.big {
   background-color: var(--black);
   color: var(--white);
+  box-sizing: border-box;
   padding: 4rem 2.5rem;
   text-align: left;
-  max-width: 7rem;
+  width: 12rem;
   box-shadow: inset 0 0 0 0 var(--yellow);
 }
 
-.button.big:hover {
+.button.big:hover,
+.button.big.slide:hover,
+.button.big.slide:focus {
   color: var(--black);
+  box-sizing: border-box;
+  box-shadow: inset 12rem 0 0 0 var(--yellow);
 }
 
-.button.slide:hover,
-.button.slide:focus {
-  box-shadow: inset 17rem 0 0 0 var(--yellow);
+.button.primary.slide:hover,
+.button.primary.slide:focus {
+  box-sizing: border-box;
+  box-shadow: inset 18rem 0 0 0 var(--yellow);
 }
 
 
