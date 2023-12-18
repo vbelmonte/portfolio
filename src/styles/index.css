@@ -492,7 +492,7 @@ section .right {
     display: grid;
     gap: 3rem;
     grid-gap: 3rem;
-    grid-template-columns: repeat(3, minmax(13.5rem, 23rem));
+    grid-template-columns: repeat(3, minmax(12rem, 23rem));
   }
 }
 
