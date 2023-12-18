@@ -811,6 +811,7 @@ footer .top {
 
 .hard-skills-container,
 .soft-skills-container,
+.hard-skills,
 .soft-skills,
 .skills-grid {
   gap: 2rem;
@@ -819,6 +820,14 @@ footer .top {
 @media only screen and (min-width: 744px) {
   .hard-skills {
     flex-direction: row;
+  }
+}
+
+
+@media only screen and (min-width: 1280px) {
+  .hard-skills,
+  .soft-skills,
+  .skills-grid {
     gap: 3rem;
   }
 }
