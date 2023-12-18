@@ -737,11 +737,23 @@ footer .top {
 }
 
 
-#about-me .catchphrase,
-#contact .catchphrase {
-  border-left: 1rem solid var(--yellow);
+.catchphrase {
+  border-left: 0.5rem solid var(--yellow);
   padding-left: 2rem;
 }
+
+@media only screen and (min-width: 744px) {
+  .catchphrase {
+    border-left-width: 0.75rem;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .catchphrase {
+    padding-left: 3rem;
+  }
+}
+
 
 #about-me .columns {
   flex-direction: column;
@@ -753,14 +765,6 @@ footer .top {
 }
 
 @media only screen and (min-width: 1280px) {
-  #about-me .catchphrase {
-    padding-left: 3rem;
-  }
-
-  #contact .catchphrase {
-    padding-left: 3rem;
-  }
-
   #about-me .columns {
     flex-direction: row;
     gap: 5rem;
