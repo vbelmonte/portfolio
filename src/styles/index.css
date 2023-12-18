@@ -690,13 +690,6 @@ header img.main-img {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
-  /*padding: 1rem 0rem;*/
-}
-
-.soft-skill-name {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .soft-skill-listing .chevron {
