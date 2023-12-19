@@ -7,7 +7,7 @@ export function Projects() {
   return (
     <section id='projects' className='display-flex'>
       <div className='display-flex gap-48 container'>
-        <div className='display-flex flex-column justify-space-between left'>
+        <div className='display-flex flex-column left'>
           <h1 className='uppercase'>Featured Projects</h1>
           <h1 className='gray'>02</h1>
         </div>

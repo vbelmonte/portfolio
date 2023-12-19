@@ -2,14 +2,14 @@ import { SoftSkillCard } from './SoftSkillCard'
 
 export function SkillsExpertise() {
   return (
-    <section id='skills-expertise' className='display-flex justify-center'>
+    <section id='skills-expertise' className='display-flex'>
       <div className='display-flex gap-48 container'>
-        <div className='display-flex flex-column justify-space-between left'>
+        <div className='display-flex flex-column left'>
           <h1 className='uppercase'>Skills & Expertise</h1>
           <h1 className='gray'>03</h1>
         </div>
         <div className='display-flex flex-column gap-80 right'>
-          <div className='display-flex flex-column gap-48'>
+          <div className='display-flex flex-column hard-skills-container'>
             <div>
               <h3 className='gray'>Hard Skills</h3>
             </div>
@@ -48,7 +48,7 @@ export function SkillsExpertise() {
               </div>
             </div>
           </div>
-          <div className='display-flex flex-column gap-48'>
+          <div className='display-flex flex-column soft-skills-container'>
             <div>
               <h3 className='gray'>Soft Skills</h3>
             </div>

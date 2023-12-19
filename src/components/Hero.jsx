@@ -4,7 +4,7 @@ import portrait from '../assets/photos/BW_Portrait_Small.jpg'
 export function Hero() {
   return (
     <header>
-      <div className='left display-flex flex-column justify-center align-center'>
+      <div className='left display-flex flex-column align-center'>
         <div className='container display-flex flex-column'>
           <div className='content display-flex flex-column'>
             <h3>
@@ -24,7 +24,7 @@ export function Hero() {
         </div>
       </div>
       <div className='right'>
-        <img src={portrait}/>
+        <img className='main-img' src={portrait}/>
       </div>
     </header>
   )
